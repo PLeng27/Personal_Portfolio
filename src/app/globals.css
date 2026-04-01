@@ -1,26 +1,239 @@
-@import "tailwindcss";
+/* @import "tailwindcss"; */
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    /* --background: #0a0a0a; */
     --foreground: #ededed;
   }
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.pageshell-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/*-------------------------------------------*/
+
+/*---------------------------------*/
+/* Dark mode toggle*/
+/* ============================================ */
+/*              DARK MODE                       */
+/* ============================================ */
+html.dark,
+html.dark body,
+html.dark .pageshell-container {
+  background-color: #121212 !important;
+  color: #e0e0e0 !important;
+}
+
+/* Navbar */
+html.dark .navbar-container {
+  background-color: #1a1a1a !important;
+  border-bottom-color: #333 !important;
+}
+html.dark .navbar-links li a {
+  color: #e0e0e0 !important;
+}
+html.dark .navbar-links li a:hover {
+  color: #ffffff !important;
+}
+html.dark .navbar-links li + li::before {
+  background-color: #444 !important;
+}
+
+/* Homepage */
+html.dark .homepage-main,
+html.dark .hero-section,
+html.dark .box-left,
+html.dark .box-right {
+  background-color: #121212 !important;
+}
+html.dark .myname {
+  /* keep shimmer — no override needed */
+}
+html.dark .myposition {
+  color: #aad4f5 !important;
+  border-left-color: #1e90ff !important;
+}
+html.dark .mylocation {
+  color: #e0e0e0 !important;
+}
+html.dark .mylocation-underline {
+  color: #7eb3ff !important;
+  text-decoration-color: #ffffff !important;
+  -webkit-text-decoration-color: #ffffff !important;
+}
+html.dark hr {
+  border-color: #d9d9d9 !important;
+}
+html.dark .btn-link-personalemail,
+html.dark .btn-link-linkedin,
+html.dark .btn-link-github {
+  background-color: #1e1e1e !important;
+  color: #e0e0e0 !important;
+  border-color: #555 !important;
+}
+
+/* About */
+html.dark .aboutme-container,
+html.dark .aboutme-form {
+  background-color: #121212 !important;
+}
+html.dark .aboutme-fieldset {
+  border-color: #555 !important;
+  background-color: #121212 !important;
+}
+html.dark .aboutme-legend .highlight-info {
+  background: #121212 !important;
+  color: #e0e0e0 !important;
+}
+html.dark .p-aboutme {
+  color: #e0e0e0 !important;
+}
+
+/* Education */
+html.dark .education-container {
+  background-color: #121212 !important;
+}
+html.dark .edu-header {
+  color: #e0e0e0 !important;
+}
+html.dark .edu-card,
+html.dark .edu-card .card {
+  background-color: #1e1e1e !important;
+  border-color: #333 !important;
+}
+html.dark .edu-body {
+  background-color: #1e1e1e !important;
+}
+html.dark .edu-title {
+  color: #e0e0e0 !important;
+  text-decoration-color: #e0e0e0 !important;
+}
+html.dark .edu-year {
+  color: #aaaaaa !important;
+}
+html.dark .edu-institute {
+  color: #7eb3ff !important;
+}
+
+/* Experience */
+html.dark .experience-container {
+  background-color: #121212 !important;
+}
+html.dark .exp-header {
+  color: #e0e0e0 !important;
+}
+html.dark .card-exp {
+  background-color: #1e1e1e !important;
+  border-color: #333 !important;
+}
+html.dark .card-header {
+  background-color: #2a2a2a !important;
+  color: #e0e0e0 !important;
+  border-bottom-color: #444 !important;
+}
+html.dark .card-header-position {
+  color: #e0e0e0 !important;
+}
+html.dark .card-header-duration {
+  color: #aaaaaa !important;
+}
+html.dark .card-exp-body,
+html.dark .card-body {
+  background-color: #1e1e1e !important;
+  color: #e0e0e0 !important;
+}
+html.dark .exp-title {
+  color: #e0e0e0 !important;
+}
+html.dark .exp-responsibility {
+  color: #e0e0e0 !important;
+}
+html.dark .exp-text,
+html.dark .exp-text ul li {
+  color: #cccccc !important;
+}
+
+/* Skills */
+html.dark .myskills-main {
+  background-color: #121212 !important;
+}
+html.dark .heading-skill,
+html.dark .skill-text {
+  color: #e0e0e0 !important;
+}
+html.dark .progress {
+  background-color: #333 !important;
+}
+
+/* Contact */
+html.dark .contactme-main {
+  background-color: #121212 !important;
+  color: #e0e0e0 !important;
+}
+html.dark .greeting-header {
+  color: #e0e0e0 !important;
+}
+html.dark .contactme-header {
+  color: #e0e0e0 !important;
+}
+html.dark .customme-fieldset {
+  border-color: #444 !important;
+  background-color: #121212 !important;
+}
+html.dark .customme-legend .highlight-info {
+  background: #121212 !important;
+  color: #e0e0e0 !important;
+}
+html.dark label {
+  color: #e0e0e0 !important;
+}
+html.dark input[type="text"],
+html.dark input[type="email"],
+html.dark textarea {
+  background-color: #2a2a2a !important;
+  color: #e0e0e0 !important;
+  border-color: #555 !important;
+}
+html.dark .contactme-main a {
+  color: #7eb3ff !important;
+}
+html.dark .form-text {
+  color: #aaaaaa !important;
+}
+
+/* Theme toggle */
+html.dark .theme-toggle-btn {
+  background-color: #1e1e1e !important;
+  border-color: #555 !important;
+}
+
+/* Fix icon visibility in dark mode */
+html.dark .personalemail-icon,
+html.dark .linkedin-icon,
+html.dark .github-icon {
+  filter: invert(1) brightness(1.8) !important;
+}
+
+/* Fix About section skill logos in dark mode */
+html.dark .about-logo {
+  filter: drop-shadow(0 0 3px rgba(255,255,255,0.6)) brightness(1.3) !important;
+}
+/*---------------------------------*/
+
+

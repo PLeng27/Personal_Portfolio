@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="km">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Khmer Livestream Scrolling Text (Bold)</title>
+
+  <!-- Import Battambang font with bold weight -->
+  <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --font-size: 52px;         /* good size for 1080p stream */
+      --text-color: #ffffff;     /* white text */
+      --speed: 45s;              /* scroll speed (lower = faster) */
+      --bottom-position: 85px;   /* distance from bottom of screen */
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 1920px;
+      height: 1080px;
+      background: transparent;
+      overflow: hidden;
+    }
+
+    .scroll-container {
+      position: absolute;
+      bottom: var(--bottom-position);
+      left: 10;
+       transform: translateX(10%);
+      width: 85%;
+      white-space: nowrap;
+      overflow: hidden;
+      font-family: "Battambang", "Noto Sans Khmer", "Khmer OS", sans-serif;
+      font-size: var(--font-size);
+      font-weight: 700; /* bold text */
+      color: var(--text-color);
+      text-shadow: 0 3px 8px rgba(0, 0, 0, 0.85);
+      letter-spacing: 1px;
+    }
+
+    .scroll-text {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll-left var(--speed) linear infinite;
+    }
+
+    @keyframes scroll-left {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="scroll-container">
+    <div class="scroll-text">
+      <!-- សន្និសីទព័ត៌មាន ស្តីពីលទ្ធផលនៃកិច្ចប្រជុំពិសេសលើកទី២ គណៈកម្មាធិការព្រំដែនទូទៅ (GBC) កម្ពុជា-ថៃ ទីក្រុងកូឡាឡាំពួរ ប្រទេសម៉ាឡេស៊ីជាមួយមិត្តភក្តិរបស់អ្នក។  -->
+      President Trump Participates in a Signing with the Prime Ministers of Cambodia and Thailand
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+.experience-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.exp-header{
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    border-left: 4px solid #1e90ff;
+    border-radius: 0;
+    padding-left: 12px;
+}
+
+.card-exp{
+    width: 100%;
+}
+
+/* --- THE FIX: APPLYING FLEXBOX TO THE PARENT CONTAINER --- */
+  .card-header {
+    display: flex;
+    /* Pushes 'position' to the left and 'duration' to the right */
+    justify-content: space-between;
+    /* Ensures items are vertically aligned in the middle */
+    align-items: center; 
+    padding: 12px 27px;
+  }
+
+  .card-header-position {
+    /* Simplified styles for flexibility */
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+
+  .card-header-duration {
+    /* Removed unnecessary text-align: right, as Flexbox handles alignment */
+    font-size: 18px;
+    font-weight: 500;
+    color: #4b5563;
+    /* Removed explicit margins that conflict with Flexbox */
+  }
+
+.card-exp-body{
+    padding: 12px 25px 20px 27px;
+    font-weight: 600;
+    
+}
+
+.exp-title{
+    font-size: 20px;
+    text-decoration: underline;
+    text-underline-offset: 4px; /* space between text and underline  */
+    margin-bottom: 13px;
+}
+
+.exp-responsibility{
+    font-size: 18px;
+    margin: 8px 0px 8px 21px;
+    line-height: 1.6;
+}
+
+.exp-text{
+    font-size: 16px;
+    /* line-height: 1.4; */
+}
+/* .exp-text::before {
+   content: "• ";       the bullet dot 
+   color: #007bff;      customize color 
+   font-size: 1.2em;    make it stand out
+} */
+
+@media (max-width: 768px) {
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .card-header-position {
+    font-size: 18px;
+    flex: 1;              /* takes remaining space */
+    padding-right: 8px;  /* gap between text and date */
+  }
+
+  .card-header-duration {
+    font-size: 14px;
+    white-space: nowrap;  /* prevents date from wrapping */
+    text-align: right;
+    flex-shrink: 0;       /* date never shrinks */
+  }
+}

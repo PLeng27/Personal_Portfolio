@@ -1,0 +1,190 @@
+.myskills-main {
+  max-width: 100%;
+}
+
+.heading-skill{
+  margin-bottom: 1rem;
+  border-left: 4px solid #1e90ff;
+  border-radius: 0;
+  padding-left: 12px;
+}
+
+/* Skill list styling */
+.text-skill {
+  list-style: none;
+  padding-left: 10px;
+  font-size: 19px;
+  color: #333;
+  font-weight: 700;
+  margin-left: 0px;
+  margin-bottom: 1rem;
+}
+
+/* Each skill item */
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.1rem;
+}
+
+/* React logo image */
+.skill-logo {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  vertical-align: middle;
+  transition: transform 1s ease;
+}
+
+/* Optional: add hover animation */
+.skill-item:hover .skill-logo {
+  transform: rotate(375deg) scale(1.5);
+}
+
+.progress {
+  height: 15px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* Base hover animation for all progress bars */
+.hover-progress {
+  flex: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 0.5rem;
+  height: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.hover-progress:hover {
+  transform: scale(1.05);
+}
+
+/* Smooth progress animation */
+.progress-bar {
+  height: 100%;
+  transition: width 1s ease-in-out;
+}
+
+/* Individual skill colors + hover effects */
+.react-progress {
+  background-color: #61dafb;
+  /* width: 60%;
+  margin-left: ; */
+}
+.hover-progress:hover .react-progress {
+  width: 90%;
+  box-shadow: 0 0 15px rgba(97, 218, 251, 0.6);
+}
+
+.ts-progress {
+  background-color: #3178c6;
+}
+.hover-progress:hover .ts-progress {
+  width: 90%;
+  box-shadow: 0 0 15px rgba(49, 120, 198, 0.6);
+}
+
+.js-progress {
+  background-color: #f7df1e;
+}
+.hover-progress:hover .js-progress {
+  width: 90%;
+  box-shadow: 0 0 15px rgba(247, 223, 30, 0.6);
+}
+
+.node-progress {
+  background-color: #68a063;
+}
+.hover-progress:hover .node-progress {
+  width: 90%;
+  box-shadow: 0 0 15px rgba(104, 160, 99, 0.6);
+}
+
+.git-progress {
+  width: 60%;
+  /* margin-left: 124px; */
+}
+.hover-progress:hover .git-progress {
+  box-shadow: 0 0 15px rgba(104, 160, 99, 0.6);
+}
+
+.github-progress {
+  background-color: #24292f;
+}
+.hover-progress:hover .github-progress {
+  width: 90%;
+  box-shadow: 0 0 15px rgba(36, 41, 47, 0.6);
+}
+
+/* 🔹 Base text style for all skill labels */
+.skill-text {
+  display: inline-block;
+  width: 105px;
+  flex-shrink: 0;
+  margin-left: 8px;
+  font-weight: 600;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* 🔹 Floating animation keyframes */
+@keyframes floatSkill {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* 🔹 Apply animation on hover for all skill items */
+.skill-item:hover .skill-text {
+  animation: floatSkill 1s ease-in-out infinite;
+}
+
+/* 🔹 Unique colors per skill */
+.react-text { color: #01c1f6; }
+.skill-item:hover .react-text { color: #21a1f1; }
+
+.ts-text { color: #3178c6; }
+.skill-item:hover .ts-text { color: #245fa6; }
+
+.js-text { color: #f7df1e; }
+.skill-item:hover .js-text { color: #d4c217; }
+
+.node-text { color: #68a063; }
+.skill-item:hover .node-text { color: #4d7e4a; }
+
+.express-text { color: #9655f1; }
+.skill-item:hover .node-text { color: #4d7e4a; }
+
+.html-text { color: #ff8812; }
+.skill-item:hover .node-text { color: #4d7e4a; }
+
+.css-text { color: #3178c6; }
+.skill-item:hover .node-text { color: #4d7e4a; }
+
+.sass-text { color: #c70acd; }
+.skill-item:hover .node-text { color: #4d7e4a; }
+
+.git-text { color: #ed5d03; }
+.skill-item:hover .node-text { color: #4d7e4a; }
+
+.github-text { color: #24292f; }
+.skill-item:hover .github-text { color: #000000; }
+
+
+/* C# skill label color */
+.csharp-text { color: #9b4f96; }
+.skill-item:hover .csharp-text { color: #c06dc0; }
+
+/* ASP.NET Core skill label color */
+.aspnet-text { color: #1a2d5a; }
+.skill-item:hover .aspnet-text { color: #00bcd4; }
+
+/* Dark mode — C# logo has black bg, needs brightness boost */
+html.dark .skill-logo[alt="CSharp Logo"] {
+  filter: brightness(1.4);
+}

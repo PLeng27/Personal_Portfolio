@@ -1,0 +1,263 @@
+.contactme-main {
+  width: 100%;
+  padding: 2rem 0;
+}
+
+/* -------------------------------------------- */
+/* Header */
+.greeting-header {
+  text-align: left;
+  margin-bottom: 1rem;
+  border-left: 4px solid #1e90ff;
+  border-radius: 0;
+  padding-left: 12px;
+}
+
+/* -------------------------------------------- */
+/* Form — Option 3 minimal underline style */
+.contactme-form {
+  width: 100%;
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-groupme {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #222;
+  margin-bottom: 0;
+}
+
+/* Underline style inputs */
+input[type="text"],
+input[type="email"] {
+  border: none;
+  border-bottom: 2px solid #1e90ff;
+  border-radius: 0;
+  padding: 6px 0;
+  font-size: 15px;
+  font-family: inherit;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  transition: border-color 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+  border-bottom-color: #005ab5;
+}
+
+textarea {
+  border: none;
+  border-bottom: 2px solid #1e90ff;
+  border-radius: 0;
+  padding: 6px 0;
+  font-size: 15px;
+  font-family: inherit;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  resize: vertical;
+  line-height: 1.5;
+  transition: border-color 0.2s ease;
+}
+
+textarea:focus {
+  border-bottom-color: #005ab5;
+}
+
+/* Send button */
+.send-btn {
+  align-self: flex-start;
+  background-color: #1e90ff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 4px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.send-btn:hover {
+  background-color: #005ab5;
+  transform: translateY(-2px);
+}
+/* -------------------------------------------- */
+
+/* Contact cards grid — Option 6 */
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1.25rem;
+  background-color: #fff;
+  cursor: pointer;
+  text-align: left;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.contact-card:hover {
+  border-color: #1e90ff;
+  box-shadow: 0 4px 12px rgba(30, 144, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.contact-card-icon {
+  font-size: 22px;
+}
+
+.contact-card-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #333;
+}
+
+.contact-card-value {
+  font-size: 12px;
+  color: #1e90ff;
+  word-break: break-all;
+}
+/* -------------------------------------------- */
+
+/* -------------------------------------------- */
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-cards {
+    grid-template-columns: 1fr;
+  }
+  .send-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+/* -------------------------------------------- */
+
+/* -------------------------------------------- */
+/* Reference section */
+.reference-section {
+  margin-top: 2rem;
+}
+
+.reference-title {
+  font-size: 20px;
+  font-weight: 700;
+  border-left: 4px solid #1e90ff;
+  border-radius: 0;
+  padding-left: 12px;
+  margin-bottom: 1.25rem;
+}
+
+.reference-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.reference-card {
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.reference-card:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.ref-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.ref-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #E6F1FB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: #0C447C;
+  flex-shrink: 0;
+}
+
+.ref-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111;
+  margin: 0;
+}
+
+.ref-role {
+  font-size: 12px;
+  color: #1e90ff;
+  margin: 0;
+  font-weight: 500;
+}
+
+.ref-card-body {
+  border-top: 1px solid #f0f0f0;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ref-org {
+  font-size: 12px;
+  color: #666;
+  font-style: italic;
+  margin: 0;
+}
+
+.ref-phone {
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .reference-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* -------------------------------------------- */

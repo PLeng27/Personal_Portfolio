@@ -1,0 +1,149 @@
+.aboutme-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.p-aboutme{
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+}
+
+.boldhighlightreact{
+    font-weight: 700;
+    color: rgb(16, 73, 205);
+}
+.boldhighlighttps{
+    font-weight: 700;
+    color: rgb(31, 0, 155);
+}
+.boldhighlightndjs{
+    font-weight: 700;
+    color: rgb(0, 153, 51);
+}
+
+/*------ About Me Section -----*/
+.aboutme-form {
+  width: 100%;
+  margin: 2rem auto;
+  /* font-family: "Times New Roman", Times, serif; */
+  font-size: 17px;
+}
+
+.aboutme-fieldset {
+  position: relative;
+  border: 2px solid #000;
+  border-radius: 8px;
+  padding: 40px 30px 30px;
+  /* margin-top: 2.2rem; space for floating legend */
+}
+
+/* Floating legend above the line */
+.aboutme-legend {
+  text-underline-offset: 4px;
+  position: absolute;
+  top: -23px;
+  left: 28px;
+  padding: 1px 0;
+  font-weight: bold;
+  font-size: 23px;
+  border-radius: 4px; /* optional for rounded edges */
+    /* background-color: rgb(216, 75, 75); */
+}
+
+.aboutme-legend .highlight-info {
+  background: rgb(255, 255, 255); /* highlight color only for part of text */
+  padding: 0 4px;            /* horizontal padding for letters */
+  border-radius: 2px;         /* optional rounded edges for highlight-info */
+}
+/*----------------------------------------------*/
+
+/*----------------------------------------------*/
+/* Base style for all skill logos */
+.about-logo {
+    width: 20px; 
+    height: 20px; 
+    object-fit: contain;
+    vertical-align:text-bottom;
+    /* Add transition for scale and box-shadow for smooth effects */
+    transition: transform 1s ease, box-shadow 0.5s ease; 
+}
+
+/* --- NEW CSS for the Hover Effect --- */
+/* NEW CSS Target using the Wrapper */
+.react-skill-container:hover .about-logo {
+    transform: rotate(360deg);
+}
+/* Optional: Apply the color change to the text container on hover */
+.react-skill-container:hover .boldhighlightreact {
+    color: #61DAFB; /* React's main color */
+    cursor: pointer;
+}
+
+/* 1. TypeScript Scale Up Effect */
+.typescript-skill-container:hover .about-logo {
+    /* Scale the logo up by 15% */
+    transform: scale(1.15); 
+}
+/* Optional: Highlight the text */
+.typescript-skill-container:hover .boldhighlighttps {
+    color: #007ACC; /* TypeScript's signature blue */
+    cursor: pointer;
+}
+
+/* 2. Node.js Shadow/Pulse Effect */
+.nodejs-skill-container:hover .about-logo {
+    /* Apply a subtle glow/shadow */
+    box-shadow: 0 0 10px rgba(100, 150, 60, 0.8), /* Soft inner glow */
+                0 0 20px rgba(100, 150, 60, 0.6); /* Larger outer glow */
+    /* Use a slight rotation to keep the Node.js look distinct */
+    transform: rotate(-5deg); 
+}
+/* Optional: Highlight the text */
+.nodejs-skill-container:hover .boldhighlightndjs {
+    color: #68A063; /* Node.js signature green */
+    cursor: pointer;
+}
+/*----------------------------------------------*/
+
+/*----------------------------------------------*/
+/* C# color */
+.boldhighlightcsharp {
+  font-weight: 700;
+  color: #9b4f96;
+}
+
+/* ASP.NET Core color */
+.boldhighlightaspnet {
+  font-weight: 700;
+  color: #1a2d5a;
+}
+
+/* C# — bounce effect */
+.csharp-skill-container:hover .about-logo {
+  transform: translateY(-4px) scale(1.2);
+}
+.csharp-skill-container:hover .boldhighlightcsharp {
+  color: #c06dc0;
+  cursor: pointer;
+}
+
+/* ASP.NET Core — pulse glow effect */
+.aspnet-skill-container:hover .about-logo {
+  box-shadow:
+    0 0 10px rgba(0, 188, 212, 0.8),
+    0 0 20px rgba(0, 188, 212, 0.5);
+  transform: scale(1.1);
+}
+.aspnet-skill-container:hover .boldhighlightaspnet {
+  color: #00bcd4;
+  cursor: pointer;
+}
+
+/* Dark mode visibility fix for C# logo (has black bg) */
+html.dark .about-logo[alt="CSharp Logo"] {
+  filter: brightness(1.4) !important;
+}
+/*----------------------------------------------*/
+

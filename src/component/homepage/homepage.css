@@ -1,0 +1,342 @@
+.homepage-main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.box-left {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.box-right {
+  width: 35%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding: 1.5rem 0;
+  gap: 1rem;
+}
+
+/* -------------------------------------------- */
+/* Color my name in linearGradient */
+.myname {
+  font-weight: 700;
+  font-size: 42px;
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff8c00,
+    #ffd700,
+    #00ff00,
+    #00ced1,
+    #1e90ff,
+    #9932cc
+  );
+  background-size: 400%; /* makes gradient moveable */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 6s linear infinite;
+}
+/* ✨ Make my name with Shimmer animation */
+@keyframes shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* 💡 Make text responsive on smaller screens */
+@media (max-width: 768px) {
+  .myname {
+    font-size: 32px;      /* bigger name */
+    margin-bottom: 5px;   /* less space before hr */
+    letter-spacing: 0.3px;
+  }
+  /* tighten hr gap */
+  hr {
+    margin: 4px -1px;
+  }
+  /* equal button sizing */
+  .btn-link-personalemail,
+  .btn-link-linkedin,
+  .btn-link-github {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  .personalemail-icon,
+  .linkedin-icon,
+  .github-icon {
+    width: 28px;
+    height: 28px;
+  }
+  /*         My location text for mobile        */
+  .mylocation {
+    font-size: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    text-align: left;
+  }
+  .mylocation-underline {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+  }
+}
+@media (max-width: 480px) {
+  .myname {
+    font-size: 26px;
+  }
+}
+/* -------------------------------------------- */
+
+/* -------------------------------------------- */
+/* 4 different design effects on my positon title*/
+/* Option 1 — Filled pill badge */
+/* .myposition {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0C447C;
+  background: #E6F1FB;
+  padding: 5px 14px;
+  border-radius: 20px;
+  letter-spacing: 0.4px;
+  margin-top: 0.5rem;
+} */
+
+/* Option 2 — Left accent border*/
+.myposition {
+  font-size: 26px;
+  font-weight: 700;
+  color: #222;
+  border-left: 4px solid #1e90ff;
+  border-radius: 0;
+  padding-left: 12px;
+  margin-top: 0.5rem;
+  letter-spacing: 0.3px;
+}
+
+@media (max-width: 768px){
+  .myposition{
+    font-size: 18px;
+  }
+}
+
+/* Option 3 — Outlined badge
+.myposition {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #185FA5;
+  border: 2px solid #185FA5;
+  padding: 4px 14px;
+  border-radius: 6px;
+  letter-spacing: 0.4px;
+  margin-top: 0.5rem;
+}
+*/
+
+/* Option 4 — Subtle highlight background
+.myposition {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 600;
+  color: #111;
+  background-color: #f0f4ff;
+  padding: 5px 12px;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+}
+*/
+/* -------------------------------------------- */
+
+.mylocation {
+  font-size: 18px;
+  color: #000;
+  display: inline-flex;     /* keeps text and icon on one line */
+  align-items: center;      /* vertically aligns the icon */
+  gap: 6px;                 /* small space between text and icon */
+  margin-top: 12px;
+  cursor: pointer;
+}
+.mylocation-underline {
+  text-decoration: underline;
+  text-underline-offset: 4px; /* space between text and underline  */
+  text-decoration-thickness: 2px; /*  thickness of underline */
+  text-decoration-color: #000; /*  underline color */
+  font-weight: 600;
+  color: rgb(0, 0, 144);
+} 
+
+.map-pin {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 4px;         /* adds extra visual spacing after text */
+}
+/* -------------------------------------------- */
+
+.introme-section {
+  margin-top: 0.8rem;
+}
+/* 🔹 Shared base style for all link buttons */
+.btn-link-personalemail,
+.btn-link-linkedin,
+.btn-link-github {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
+  padding: 7px 10px;
+  border-radius: 8px;
+  margin-right: 3px; /* ✅ adds spacing between buttons */
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 
+    background-color 0.3s ease,
+    transform 0.2s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* ✅ Individual hover effects for each button */
+.btn-link-personalemail:hover {
+  background-color: #00ff15; /* 💚 Bright green */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 255, 21, 0.4);
+  border-color: #00cc11;
+  color: #000;
+}
+
+.btn-link-linkedin:hover {
+  background-color: #0077b5; /* 💙 LinkedIn Blue */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 119, 181, 0.4);
+  border-color: #005a87;
+  color: #ffffff;
+}
+
+.btn-link-github:hover {
+  background-color: #7b7b7b; /* ⚫ GitHub Black */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(51, 51, 51, 0.4);
+  border-color: #7b7b7b;
+  color: #ffffff;
+}
+
+/* 🔹 Icon animation */
+.personalemail-icon {
+  width: 30px;
+  height: 30px;
+  transition: filter 0.3s ease;
+}
+.linkedin-icon {
+  width: 30px;
+  height: 30px;
+  transition: filter 0.3s ease;
+}
+.github-icon {
+  width: 30px;
+  height: 30px;
+  transition: filter 0.3s ease;
+}
+
+.btn-link-personalemail:hover .personalemail-icon {
+  filter: brightness(1.4);
+}
+
+/* 🔹 Responsive scaling */
+@media (max-width: 600px) {
+  .btn-link-personalemail,
+  .btn-link-linkedin,
+  .btn-link-github {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+
+  .personalemail-icon {
+    width: 22px;
+    height: 22px;
+  }
+}
+/* -------------------------------------------- */
+
+/* Optional: click ripple effect  */
+.btn:active {
+  transform: scale(0.96);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* -------------------------------------------- */
+/* image_photo.css */
+/* Profile Image Styling */
+.profile-img {
+  width: 220px;
+  height: 290px;
+  border-radius: 10%;
+  object-fit: cover;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+  margin-left: auto; /* ✅ pushes image to the right */
+  display: block; /* ensures margin works properly */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* ✅ Responsive scaling */
+@media (max-width: 992px) {
+  .profile-img {
+    width: 180px;
+    height: 240px;
+  }
+}
+@media (max-width: 768px) {
+  .profile-img {
+    width: 150px;
+    height: 200px;
+    margin: 1rem auto; /* center image on tablets */
+    display: block;
+  }
+}
+@media (max-width: 480px) {
+  .profile-img {
+    width: 120px;
+    height: 160px;
+    margin: 1rem auto; /* center on small screens */
+  }
+}
+/* Optional: subtle hover pop */
+.profile-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+/* -------------------------------------------- */
+
+
+
+

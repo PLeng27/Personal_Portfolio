@@ -1,0 +1,102 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar-container {
+  width: 100%;
+  border-bottom: 1px solid #e7e7e7;
+  background-color: #fff;
+  padding: 0 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+/*------------------------------*/
+.navbar-links {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links li + li::before {
+  content: '';
+  display: inline-block;
+  width: 2px;
+  height: 25px;
+  background-color: #ccc;
+  flex-shrink: 0;
+}
+/*------------------------------*/
+
+.navbar-links li a {
+  display: block;
+  padding: 12px 10px;
+  color: #333;
+  font-weight: 700;
+  font-size: 24px;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-links li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background-color: #ff7100;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.navbar-links li a:hover {
+  color: #ff7100;
+  transform: scale(1.05);
+}
+
+.navbar-links li a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+@media (max-width: 768px) {
+  .navbar-links li a {
+    padding: 10px 6px;
+    font-size: 14px;
+  }
+  .navbar-links li + li::before {
+    height: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-links li a {
+    padding: 8px 4px;
+    font-size: 13px;
+  }
+  .navbar-links li + li::before {
+    height: 12px;
+  }
+}
+
+/* Offset scroll position so navbar doesn't cover section headings */
+#MyHome,
+#AboutMe,
+#MyEducation,
+#MyExperience,
+#MySkills,
+#MyContact {
+  scroll-margin-top: 60px;  /* matches navbar height */
+}
